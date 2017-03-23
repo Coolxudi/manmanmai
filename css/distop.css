@@ -1,0 +1,249 @@
+body{
+    background-color: #f2f2f2;
+}
+header{
+    background-color: #ff841d;
+    height: 50px;
+    border-bottom: 1px solid #e6e6e6;
+}
+header a{
+    display: block;
+}
+header .logo{
+    padding: 12px;
+    margin-left: 7px;
+}
+header .logo a img{
+    max-height: 25px;
+    overflow: hidden;
+}
+header .appdown{
+    padding: 7px;
+}
+header .appdown a img{
+    max-height: 34px;
+    overflow: hidden;
+}
+.search{
+    border-bottom: 1px solid #e6e6e6;
+    height: 50px;
+    padding: 10px;
+    position: relative;
+    background-color: #fff;
+}
+.search .searchtex{
+    background-color: #f1f1f1;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    width: 90%;
+    padding-left: 16px;
+    font-size: 16px;
+}
+.search .searchbtn{
+    width: 63px;
+    background: #ff841d;
+    color: #fff;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 16px;
+}
+
+/*footer部分开始*/
+.foot_top{
+    background-color: #efefef;
+    border-top: 1px solid #c4c4c4;
+    border-bottom: 1px solid #c4c4c4;
+    height: 34px;
+    line-height: 34px;
+}
+.foot_top a{
+    box-sizing: border-box;
+    float: left;
+    font-size: 14px;
+    border-right: 1px solid #c4c4c4;
+    text-align: center;
+    width: 30%;
+}
+.foot_bottom{
+    background-color: #efefef;
+    text-align: center;
+    font-size: 12px;
+    padding: 15px 0;
+    color: #666;
+}
+/*footer部分结束*/
+
+
+/*nav部分开始*/
+nav{
+    height: 36px;
+    background-color: #ebebeb;
+    background: -webkit-gradient(linear,0 0,0 100%,from(#ffffff),to(#ebebeb));
+    border-top: 1px solid #ebebeb;
+    border-bottom: 1px solid #ccc;
+    line-height: 36px;
+    padding-left: 8px;
+    font-size: 14px;
+}
+/*nav部分结束*/
+
+/*model品牌排行部分*/
+.model .title{
+    font-size: 16px;
+    color:#874604;
+    height: 40px;
+    padding-left:10px;
+    line-height: 40px;
+    border-top:1px solid #ccc;
+    border-bottom:1px solid #ccc;
+    background-color:#eee;
+}
+
+.model .sortlist ul li{
+    border-bottom: 1px solid #e7e7e7;
+    padding: 10px;
+}
+.model .sortlist ul li a{
+    display: block;
+}
+.model .sortlist ul li a em{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background-color: #c9c9c9;
+    color: #fff;
+    line-height: 20px;
+    vertical-align: top;
+    margin: 0 10px 0 0;
+    font-size: 14px;
+}
+.model .sortlist ul li a em.top1{
+    background-color: #f10e0e;
+}
+.model .sortlist ul li a em.top2{
+    background-color: #ff9314;
+}
+.model .sortlist ul li a em.top3{
+    background-color: #8adf5b;
+}
+.model .sortlist ul li a .inner{
+    display: inline-block;
+}
+.model .sortlist ul li a .inner .tit{
+    color: #000;
+    font-size: 16px;
+}
+.model .sortlist ul li a .inner p{
+    font-size: 12px;
+    color: #999;
+    margin-top: 3px;
+}
+
+/*model销量排行部分*/
+.model .salelist ul li{
+    border-bottom: 1px solid #e7e7e7;
+    padding: 10px;
+}
+.model .salelist ul li a{
+    display: block;
+}
+.model .salelist ul li a .pic{
+    float: left;
+    margin-right: 10px;
+    width: 100px;
+    height: 100px;
+}
+.model .salelist ul li a .pic img{
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+}
+.model .salelist ul li a .info{
+    font-size: 14px;
+    line-height: 24px;
+}
+.model .salelist ul li a .info .tit{
+    color: #333;
+    line-height: 22px;
+    min-height: 44px;
+    word-break: break-all;
+}
+.model .salelist ul li a .info .price{
+    height: 25px;
+    margin-top: 4px;
+}
+.model .salelist ul li a .info .price em{
+    font-size: 18px;
+    color: #ea3900;
+    vertical-align: middle;
+    float: left;
+}
+.model .salelist ul li a .info .other{
+    font-size: 12px;
+    color: #999;
+}
+.model .salelist ul li a .info .other em{
+    font-style: normal;
+    margin-right: 10px;
+}
+
+/*评论部分*/
+.model .commentlist ul li{
+    border-bottom: 1px solid #e7e7e7;
+}
+.model .commentlist ul li a{
+    display: block;
+}
+.model .commentlist a{
+    display: block;
+    padding: 10px;
+}
+.model .commentlist .protit{
+
+}
+.model .commentlist .protit .pic{
+    float: left;
+    margin-right: 10px;
+}
+.model .commentlist .protit .pic img{
+    width: 80px;
+    height: 80px;
+    vertical-align: middle;
+}
+.model .commentlist .protit .tit{
+    color: #999;
+    line-height: 22px;
+    font-size: 14px;
+    word-break: break-all;
+}
+.model .commentlist ul li .plbox{
+    background: #f8f8f8;
+    padding: 10px;
+    border: 1px solid #e7e7e7;
+    position: relative;
+}
+.model .commentlist ul li a{
+    display: block;
+}
+.model .commentlist ul li .plbox .name{
+    color: #4f6900;
+    font-size: 14px;
+}
+.model .commentlist ul li .plbox .name i{
+    color: #999;
+    float: right;
+    font-style: normal;
+}
+.model .commentlist ul li .plbox .con{
+    color: #000;
+    margin-top: 10px;
+    line-height: 24px;
+    font-size: 15px;
+    word-break: break-all;
+}

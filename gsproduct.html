@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/gsproduct.css"/>
+    <link rel="stylesheet" href="font1/iconfont.css"/>
+</head>
+<body>
+<header class="head">
+    <div class="back">
+        <a href="coupon.html" class="iconfont">&#xe607</a>
+    </div>
+    <h1>凑单品</h1>
+    <div class="home">
+        <a href="#" class="downLoad"></a>
+    </div>
+</header>
+<div class="coudan-box">
+    <div class="hd">
+        <div class="filter">
+            <ul class="clearfix">
+                <li>
+                    <a href="javascript:;">
+                        <span>京东</span>
+                        <i class="iconfont icon-sanjiao"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span>华北</span>
+                        <i class="iconfont icon-sanjiao"></i>
+                    </a>
+                </li>
+                <li>
+                    <a href="javascript:;">
+                        <span>全部价格</span>
+                        <i class="iconfont icon-sanjiao"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="search">
+            <i class="iconfont icon-icon2"></i>
+        </div>
+        <div class="popsort popbox">
+            <ul>
+
+            </ul>
+        </div>
+        <div class="popprice popbox">
+            <ul>
+
+            </ul>
+        </div>
+        <div class="popcat popbox">
+            <ul>
+                <li class="on"><a href="javascript:void(0);">全部价格</a></li>
+                <li><a href="javascript:void(0);">1-3元</a></li>
+                <li><a href="javascript:void(0);">3-5元</a></li>
+                <li><a href="javascript:void(0);">5-10元</a></li>
+                <li><a href="javascript:void(0);">10-15元</a></li>
+                <li><a href="javascript:void(0);">15元以上</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="bd">
+        <ul class="clearfix">
+
+        </ul>
+    </div>
+</div>
+</body>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/template.js"></script>
+<script src="js/gsproduct.js"></script>
+<script type="text/html" id="popsortTemplate">
+    {{if result}}
+    {{each result as value i}}
+    <li><a href="javascript:changeUrl('site',{{value.shopId}})">{{value.shopName}}</a></li>
+    {{/each}}
+    {{/if}}
+</script>
+
+<script type="text/html" id="poppriceTemplate">
+    {{if result}}
+    {{each result as value i}}
+    <li><a href="javascript:changeUrl('area',{{value.areaId}})">{{value.areaName}}</a></li>
+    {{/each}}
+    {{/if}}
+</script>
+
+<script type="text/html" id="listTemplate">
+    {{if result}}
+    {{each result as value i}}
+    <li>
+        <a href="#">
+            <div class="pic">
+                <img src="{{value.productImg}}"
+                     alt=""/>
+            </div>
+            <div class="title">
+                {{value.productName}}
+            </div>
+            <div class="other clearfix">
+                <div class="price">
+                    <em>¥</em>
+                    {{value.productPrice.slice(1)}}
+                </div>
+                <div class="btn" href="#">去凑单</div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+    {{/if}}
+</script>
+</html>

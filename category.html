@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title>Document</title>
+    <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/category.css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<body>
+<header>
+    <div class="logo f_left">
+        <a href="index.html"><img src="images/header_logo.png" alt=""/></a>
+    </div>
+    <div class="appdown f_right"><a href="#"><img src="images/header_app.png" alt=""/></a></div>
+</header>
+<form action="">
+    <div class="search">
+        <input type="text" class="searchtex" placeholder="请输入你想比价的商品"/>
+        <input type="button" value="搜索" class="searchbtn"/>
+    </div>
+</form>
+<div class="brief">
+    <div class="briefin">
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+            <div class="spinner one">
+                <div class="spinner-container container1">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                </div>
+                <div class="spinner-container container2">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                </div>
+                <div class="spinner-container container3">
+                    <div class="circle1"></div>
+                    <div class="circle2"></div>
+                    <div class="circle3"></div>
+                    <div class="circle4"></div>
+                </div>
+            </div>
+        <script type="text/html" id="titleTemplate">
+            {{if result}}
+            {{each result as value i}}
+                <div class="panel panel-default">
+                    <div class="panel-heading" role="tab" id="heading{{i}}">
+                        <h4 class="panel-title">
+                            <a titleid="{{value.titleId}}" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapse{{i}}" aria-expanded="true" aria-controls="collapse{{i}}">
+                                {{value.title}}
+                            </a>
+                        </h4>
+                    </div>
+                    <div id="collapse{{i}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="heading{{i}}">
+                        <div class="panel-body">
+
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+            {{/if}}
+        </script>>
+        </div>
+    </div>
+</div>
+
+
+
+
+<footer>
+    <div class="foot_top clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#top" style="width: 40%; border: 0;"><i class="iconfont">&#xe602</i>返回顶部</a>
+    </div>
+    <div class="foot_bottom">
+        <p>
+            <a href="#" style="color: red">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+</body>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/bootstrap/js/bootstrap.min.js"></script>
+<script src="lib/template.js"></script>
+<script src="js/category.js"></script>
+</html>

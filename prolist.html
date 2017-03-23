@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/prolist.css"/>
+</head>
+<body>
+<header>
+    <div class="logo f_left">
+        <a href="#"><img src="images/header_logo.png" alt=""/></a>
+    </div>
+    <div class="appdown f_right"><a href="#"><img src="images/header_app.png" alt=""/></a></div>
+</header>
+<form action="">
+    <div class="search">
+        <input type="text" class="searchtex" placeholder="请输入你想比价的商品"/>
+        <input type="button" value="搜索" class="searchbtn"/>
+    </div>
+</form>
+<nav>
+    <a href="index.html">首页</a>
+    &nbsp;>&nbsp;
+    <a href="category.html">全部分类</a>
+    &nbsp;>&nbsp;
+    <a class="nav" href="#"></a>
+</nav>
+<ul id="content">
+    <script type="text/html" id="contentTemplate">
+        {{if result}}
+        {{each result as value i}}
+        <li>
+            <a href="bijia.html?id={{value.productId}}" class='clearfix'>
+                <div class="pic f_left">
+                    {{#value.productImg}}
+                </div>
+                <div class="info">
+                    <div class="title">{{value.productName}}
+                    </div>
+                    <div class="price">{{value.productPrice}}</div>
+                    <div class="other">
+                        <span class="mall">{{value.productQuote=/\d*/.exec(value.productQuote)[0]}}商城报价</span>
+                            <span class="comment f_right">
+                                <span>有{{value.productCom?/\d+/.exec(value.productCom)[0]:0}}人评论</span>
+                            </span>
+                    </div>
+                </div>
+            </a>
+        </li>
+        {{/each}}
+        {{/if}}
+    </script>
+</ul>
+
+
+
+<div class="page clearfix">
+    <a href="#" class="btn1 f_left">上一页</a>
+    <div class="pageset">
+
+    </div>
+    <ul id="pagelist">
+    </ul>
+    <a href="#" class="btn2 f_right">下一页</a>
+</div>
+<footer>
+    <div class="foot_top clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#top" style="width: 40%;border-right: 0"><i class="iconfont">&#xe602</i>返回顶部</a>
+    </div>
+    <div class="foot_bottom">
+        <p>
+            <a href="#" style="color: red">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+</body>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/template.js"></script>
+<script src='js/prolist.js'></script>
+</html>

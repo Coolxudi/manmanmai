@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/inlanddiscount.css"/>
+</head>
+<body>
+<header class="head">
+    <div class="back">
+        <a href="index.html" class="iconfont">&#xe607</a>
+    </div>
+    <h1>国内折扣</h1>
+    <div class="home">
+        <a href="#" class="downLoad"></a>
+    </div>
+</header>
+<div class="list">
+    <ul>
+
+    </ul>
+</div>
+
+<nav>
+    <a href="index.html">首页</a>
+    &nbsp;>&nbsp;
+    <a href="#">省钱快爆</a>
+</nav>
+<footer>
+    <div class="foot_top clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#top" style="width: 40%;border-right: 0"><i class="iconfont">&#xe602</i>返回顶部</a>
+    </div>
+    <div class="foot_bottom">
+        <p>
+            <a href="#" style="color: red">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+</body>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/template.js"></script>
+<script src="js/inlanddiscount.js"></script>
+<script type="text/html" id="listTemplate">
+    {{if result}}
+    {{each result as value i}}
+    <li>
+        <a href="discount.html?id={{value.productId}}#discount">
+            <div class="img">
+                {{#value.productImg}}
+            </div>
+            <div class="title">
+                {{value.productName}}
+            </div>
+            <div class="subtit">{{value.productPrice}}</div>
+            <div class="info">
+                <div class="mall">{{value.productFrom}} | {{value.productTime}}</div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+    {{/if}}
+</script>
+</html>

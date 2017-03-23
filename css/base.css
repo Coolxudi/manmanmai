@@ -1,0 +1,200 @@
+/*reset css  重置默认的一些样式  浏览器子自带的  目的是保持各种终端显示一致*/
+/*所有的标签和伪类  before after*/
+*,
+::before,
+::after{
+    padding: 0;
+    margin: 0;
+
+    /*在移动端特殊的设置*/
+    /*清除点击高亮效果*/
+    -webkit-tap-highlight-color: transparent;
+    /*设置所有的盒子的宽度以边框开始计算*/
+    -webkit-box-sizing: border-box;
+    /*要兼容 webkit 浏览器内核厂商 这种情况一般是老的移动端浏览器*/
+    box-sizing: border-box;
+}
+body{
+    font-size: 14px;
+    color: #333;
+    font-family: "Helvetica Neue", Helvetica, STHeiTi, sans-serif !important;/*是设备默认的字体*/
+}
+ul,ol{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: #333;
+}
+a:hover{
+    color: #333;
+}
+button,input,textarea{
+    border: none;
+    outline: none;
+    resize: none;
+    /*特殊的属性定义  清除浏览器给input自带的样式*/
+    -webkit-appearance: none;/*组件默认的样式空*/
+}
+/*common css  也就是我们公用的css*/
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
+}
+.clearfix::after,
+.clearfix::before{
+    content: ".";
+    line-height: 0;
+    height: 0;
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+.m_r10{
+    margin-right: 10px;
+}
+.m_l10{
+    margin-left: 10px;
+}
+.m_t10{
+    margin-top: 10px;
+}
+.m_b10{
+    margin-bottom: 10px;
+}
+.mianColor{
+    color: #d8505c;
+}
+
+
+/*loading动画*/
+.spinner {
+    margin: 100px auto;
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+
+.container1 > div, .container2 > div, .container3 > div {
+    width: 24px;
+    height: 24px;
+    background-color: deepskyblue;
+
+    border-radius: 100%;
+    position: absolute;
+    -webkit-animation: bouncedelay 1.2s infinite ease-in-out;
+    animation: bouncedelay 1.2s infinite ease-in-out;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.spinner .spinner-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.container2 {
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+}
+
+.container3 {
+    -webkit-transform: rotateZ(90deg);
+    transform: rotateZ(90deg);
+}
+
+.circle1 { top: 0; left: 0; }
+.circle2 { top: 0; right: 0; }
+.circle3 { right: 0; bottom: 0; }
+.circle4 { left: 0; bottom: 0; }
+
+.container2 .circle1 {
+    -webkit-animation-delay: -1.1s;
+    animation-delay: -1.1s;
+}
+
+.container3 .circle1 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+}
+
+.container1 .circle2 {
+    -webkit-animation-delay: -0.9s;
+    animation-delay: -0.9s;
+}
+
+.container2 .circle2 {
+    -webkit-animation-delay: -0.8s;
+    animation-delay: -0.8s;
+}
+
+.container3 .circle2 {
+    -webkit-animation-delay: -0.7s;
+    animation-delay: -0.7s;
+}
+
+.container1 .circle3 {
+    -webkit-animation-delay: -0.6s;
+    animation-delay: -0.6s;
+}
+
+.container2 .circle3 {
+    -webkit-animation-delay: -0.5s;
+    animation-delay: -0.5s;
+}
+
+.container3 .circle3 {
+    -webkit-animation-delay: -0.4s;
+    animation-delay: -0.4s;
+}
+
+.container1 .circle4 {
+    -webkit-animation-delay: -0.3s;
+    animation-delay: -0.3s;
+}
+
+.container2 .circle4 {
+    -webkit-animation-delay: -0.2s;
+    animation-delay: -0.2s;
+}
+
+.container3 .circle4 {
+    -webkit-animation-delay: -0.1s;
+    animation-delay: -0.1s;
+}
+
+@-webkit-keyframes bouncedelay {
+    0%, 80%, 100% { -webkit-transform: scale(0.0) }
+    40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes bouncedelay {
+    0%, 80%, 100% {
+        transform: scale(0.0);
+        -webkit-transform: scale(0.0);
+    } 40% {
+          transform: scale(1.0);
+          -webkit-transform: scale(1.0);
+      }
+}
+
+
+/*字体*/
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.eot');
+    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/iconfont.woff') format('woff'),
+    url('../fonts/iconfont.ttf') format('truetype'),
+    url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}

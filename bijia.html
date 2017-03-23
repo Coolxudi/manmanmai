@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/bijia.css"/>
+</head>
+<body>
+<header>
+    <div class="logo f_left">
+        <a href="#"><img src="images/header_logo.png" alt=""/></a>
+    </div>
+    <div class="appdown f_right"><a href="#"><img src="images/header_app.png" alt=""/></a></div>
+</header>
+<form action="">
+    <div class="search">
+        <input type="text" class="searchtex" placeholder="请输入你想比价的商品"/>
+        <input type="button" value="搜索" class="searchbtn"/>
+    </div>
+</form>
+<nav>
+    <a href="index.html">首页</a>
+    &nbsp;>&nbsp;
+    <a class="nav11"></a>
+    &nbsp;>&nbsp;
+    <a class="f12" href="#"></a>
+</nav>
+<section>
+    <div id="content"></div>
+    <script type="text/html" id="infoTemplate">
+        <div class="info">
+            <div class="title">{{result[0].productName}}</div>
+            <div class="pic">
+                {{#result[0].productImg}}
+            </div>
+        </div>
+        <div class="navList clearfix">
+            <a class="active" href="#">比价购买</a>
+            <a href="#">产品参数</a>
+            <a href="#">评价</a>
+        </div>
+        <div class="price">
+            {{#result[0].bjShop}}
+        </div>
+        <div class="tips">
+            * 实际价格以各网站列出的实时售价为准，我们提供的价格可能有数小时至数日的延迟。
+        </div>
+    </script>
+
+    <div class="comment">
+        <div class="tit">网友评价</div>
+        <div class="commentlist"></div>
+        <div class="more">
+            <a href="#">查看更多评价</a>
+        </div>
+    </div>
+    <script type="text/html" id="commentTemplate">
+        {{if result}}
+        {{each result as value i}}
+
+
+            <div class="pj_list clearfix">
+                <div class="name f_left">{{value.comName}}</div>
+                <div class="message">
+                    <div class="time">{{value.comTime}}</div>
+                    <div class="buyfrom">{{value.comFrom}}</div>
+                </div>
+                <div class='content'>
+                    {{value.comContent}}
+                </div>
+                <div class="reply"><a href="#">回复</a></div>
+            </div>
+
+
+        {{/each}}
+        {{/if}}
+    </script>
+</section>
+<footer>
+    <div class="foot_top clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#top" style="width: 40%; border: 0;"><i class="iconfont">&#xe602</i>返回顶部</a>
+    </div>
+    <div class="foot_bottom">
+        <p>
+            <a href="#" style="color: red">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+</body>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/template.js"></script>
+<script src="js/bijia.js"></script>
+</html>

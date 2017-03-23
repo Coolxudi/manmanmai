@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/distop.css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+</head>
+<body>
+<header>
+    <div class="logo f_left">
+        <a href="index.html"><img src="images/header_logo.png" alt=""/></a>
+    </div>
+    <div class="appdown f_right"><a href="#"><img src="images/header_app.png" alt=""/></a></div>
+</header>
+<form action="">
+    <div class="search">
+        <input type="text" class="searchtex" placeholder="请输入你想比价的商品"/>
+        <input type="button" value="搜索" class="searchbtn"/>
+    </div>
+</form>
+<nav>
+    <a href="index.html">首页</a>
+    >
+    <a href="brandTitle.html">品牌大全</a>
+    >
+    <a href="#"><span></span>哪个牌子好</a>
+</nav>
+<div class="model">
+    <div class="title">
+        <span></span>哪个牌子好
+    </div>
+    <div class="sortlist">
+        <ul>
+
+        </ul>
+    </div>
+</div>
+<div class="model">
+    <div class="title"><span></span>产品销量排行</div>
+    <div class="salelist">
+        <ul>
+
+        </ul>
+    </div>
+</div>
+<div class="model">
+    <div class="title"><span></span>最新评论</div>
+    <div class="commentlist">
+        <a href="#">
+            <div class="protit clearfix">
+                <div class="pic">
+
+                </div>
+                <div class="tit">
+                    康佳(KONKA) V55U 55英寸 4K超高清智能电视
+                </div>
+            </div>
+        </a>
+        <ul>
+
+        </ul>
+    </div>
+</div>
+<footer>
+    <div class="foot_top clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#top" style="width: 40%; border: 0;"><i class="iconfont">&#xe602</i>返回顶部</a>
+    </div>
+    <div class="foot_bottom">
+        <p>
+            <a href="#" style="color: red">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+</body>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/template.js"></script>
+<script src="js/distop.js"></script>
+<script type="text/html" id="titTemplate">
+    {{if result}}
+    {{each result as value i}}
+    <li>
+        <a href="#">
+            <em class="top{{i+1}}">{{i+1}}</em>
+            <div class="inner">
+                <div class="tit">
+                    {{value.brandName}}
+                </div>
+                <p>{{value.brandInfo}}</p>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+    {{/if}}
+</script>
+<script type="text/html" id="saleTemplate">
+    {{if result}}
+    {{each result as value i}}
+    <li>
+        <a href="bijia.html?id={{value.productId}}">
+            <div class="pic">
+                {{#value.productImg}}
+            </div>
+            <div class="info">
+                <div class="tit">{{value.productName}}</div>
+                <div class="price">
+                    <em>{{value.productPrice}}</em>
+                </div>
+                <div class="other">
+                    <em>{{value.productQuote}}</em>
+                    <em>全网{{value.productCom}}</em>
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+    {{/if}}
+</script>
+<script type="text/html" id="commentTemplate">
+    {{if result}}
+    {{each result as value i}}
+    <li>
+        <a href="#">
+            <div class="plbox">
+                <div class="name">
+                    <span>{{value.comName}}</span>
+                                <span class="star">
+                                    <em class="star5"></em>
+                                </span>
+                    <i>{{value.comTime}}</i>
+                </div>
+                <div class="con">
+                    {{value.comContent}}
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+    {{/if}}
+</script>
+</html>

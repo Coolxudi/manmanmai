@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/couponproduct.css"/>
+</head>
+<body>
+<header class="head">
+    <div class="back">
+        <a href="coupon.html" class="iconfont">&#xe607</a>
+    </div>
+    <h1></h1>
+    <div class="home">
+        <a href="#" class="downLoad"></a>
+    </div>
+</header>
+<div class="content">
+    <div class="title">
+        --点餐前出示手机中的优惠券，即可享受优惠--
+    </div>
+    <div class="quan-box">
+        <ul>
+
+        </ul>
+    </div>
+</div>
+<nav>
+    <a href="index.html">首页</a>
+    &nbsp;>&nbsp;
+    <a href="coupon.html">优惠券</a>
+    &nbsp;>&nbsp;
+    <a href="#"></a>
+</nav>
+<footer>
+    <div class="foot_top clearfix">
+        <a href="#">登录</a>
+        <a href="#">注册</a>
+        <a href="#top" style="width: 40%;border-right: 0"><i class="iconfont">&#xe602</i>返回顶部</a>
+    </div>
+    <div class="foot_bottom">
+        <p>
+            <a href="#" style="color: red">手机APP下载</a>
+            <a href="#">慢慢买手机版</a>
+            -- 掌上比价平台
+        </p>
+        <p>m.manmanbuy.com</p>
+    </div>
+</footer>
+<div class="mask">
+    <div class="pic"></div>
+</div>
+</body>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/template.js"></script>
+<script src="js/couponproduct.js"></script>
+<script type="text/html" id="listTemplate">
+    {{if result}}
+    {{each result as value i}}
+    <li>
+        <a href="#">
+            <div class="pic">
+                {{#value.couponProductImg}}
+            </div>
+            <div class="info">
+                <div class="tit">
+                    <h3>{{value.couponProductName}}</h3>
+                    <h2>
+                        {{value.couponProductPrice?value.couponProductPrice:0}}
+                    </h2>
+                </div>
+                <div class="time">
+                    {{value.couponProductTime}}
+                </div>
+            </div>
+        </a>
+    </li>
+    {{/each}}
+    {{/if}}
+</script>
+</html>

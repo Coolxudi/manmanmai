@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <title></title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/discount.css"/>
+</head>
+<body>
+<header class="head">
+    <div class="back">
+        <a href="#" class="iconfont">&#xe607</a>
+    </div>
+    <h1>国内折扣</h1>
+    <div class="home">
+        <a href="#" class="downLoad"></a>
+    </div>
+</header>
+<section class="container">
+    <div id="con"></div>
+    <script type="text/html" id="conTemplate">
+        <div class="title">
+            <h3>{{result[0].productName}}</h3>
+            <h4>{{result[0].productPinkage}}</h4>
+        </div>
+        <div class="info">
+            <span class="mall">{{result[0].productFrom}}</span>
+            <span class="addtime" style="margin-right: 4px">{{result[0].productTime}}</span>
+            <span class="author">{{result[0].productTips}}</span>
+        <span class="author">
+            <a href="#" style="color: #4682c5;">{{result[0].productComCount}}</a>
+        </span>
+        </div>
+        <div class="content clearfix">
+            <div class="picwrap clearfix">
+                {{#result[0].productImgSm}}
+                {{#result[0].productImg}}
+            </div>
+            <div class="conn">
+                {{result[0].productInfo1}}
+                {{result[0].productInfo}}
+                <br/>
+                <br/>
+                {{result[0].productInfo2}}
+            </div>
+        </div>
+        <div class="picture" style="text-align: center">
+            {{#result[0].productImg2}}
+        </div>
+        <div class="area">
+            <ul>
+                <li><a href="#"><span>北京<strong>有货</strong></span></a></li>
+                <li><a href="#"><span>北京<strong>有货</strong></span></a></li>
+                <li><a href="#"><span>北京<strong>有货</strong></span></a></li>
+                <li><a href="#"><span>北京<strong>有货</strong></span></a></li>
+                <li><a href="#"><span>北京<strong>有货</strong></span></a></li>
+                <li><a href="#"><span>北京<strong>有货</strong></span></a></li>
+                <li><a href="#"><span>北京<strong>有货</strong></span></a></li>
+                <li><a href="#"><span>北京<strong>有货</strong></span></a></li>
+                <li><a href="#"><span>北京<strong>有货</strong></span></a></li>
+            </ul>
+        </div>
+    </script>
+    <div class="golink">
+        <a href="#"><i Class='iconfont'>&#xe66f;</i>前往购买</a>
+    </div>
+    <div class="comment" id="comm">
+        <!--<div class="tit">发表评论</div>-->
+        <!--<div class="reply">-->
+            <!--<textarea name="" id=""  rows="3"></textarea>-->
+            <!--<div class="ctrl">-->
+                <!--<input type="button" value="发表评论"/>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="tit">最新评论</div>-->
+        <!--<div class="list">-->
+            <!--<ul>-->
+                <!--<li>-->
+                    <!--<div class="using">-->
+                        <!--<img src="http://bbs.manmanbuy.com/attachment/upload/middle/95/243395.jpg">-->
+                    <!--</div>-->
+                    <!--<div class="con">-->
+                        <!--<div class="name clearfix">-->
+                            <!--<div class="username f_left">无言以对</div>-->
+                            <!--<div class="time f_right">2017/3/14 14:28:43</div>-->
+                        <!--</div>-->
+                        <!--<div class="content">这颜色挺骚气的，我喜欢，春天穿这个颜色蛮显眼的，而且是太平鸟的，价格那么便宜，入了</div>-->
+                    <!--</div>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+    </div>
+</section>
+<nav class="nav">
+    <a href="#">首页</a>&nbsp;>&nbsp;<a href="#">超值推荐</a>&nbsp;>&nbsp;太平鸟 男士条纹夹克外套
+</nav>
+<footer>
+    <div class="comment f_left">
+        <i class="iconfont">&#xe668;</i>
+        <p>评论</p>
+    </div>
+    <div class="gobuy">
+        <a href="#"><i class="iconfont">&#xe66f;</i>前往购买</a>
+    </div>
+</footer>
+</body>
+<script src="lib/jquery/jquery.min.js"></script>
+<script src="lib/template.js"></script>
+<script src="js/discount.js"></script>
+</html>
